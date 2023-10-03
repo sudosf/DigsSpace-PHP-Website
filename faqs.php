@@ -1,10 +1,14 @@
-
-</html>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <title>DigsSpace FAQ</title>
 
     <style>
@@ -13,26 +17,6 @@
               margin: 0;
               padding: 0;
               box-sizing: border-box;
-          }
-  
-          /* Set the main background color and font styles */
-          body {
-              background-color: #F4F4F4;
-              font-family: Arial, sans-serif;
-              color: #333;
-              line-height: 1.6;
-          }
-  
-          /* Header styling */
-          header {
-              background-color: #4169E1;
-              color: #fff;
-              text-align: center;
-              padding: 20px 0;
-          }
-  
-          header h1 {
-              font-size: 36px;
           }
   
           /* FAQ sections */
@@ -62,14 +46,7 @@
               margin-bottom: 10px;
           }
   
-          /* Footer styling */
-          footer {
-              background-color: #4169E1;
-              color: #fff;
-              text-align: center;
-              padding: 10px 0;
-          }
-  
+
           /* Links */
           a {
               color: #4169E1;
@@ -86,8 +63,12 @@
      
 </head>
 <body>
- <?php $currentPage = 'faqs'; include('header.php'); ?> <br>
-    <header>
+ <?php 
+    $currentPage = 'faqs';
+    include('header.php'); 
+  ?>
+
+    <header class="text-center bg-primary p-5 text-white">
         <h1>Frequently Asked Questions</h1>
     </header>
 
@@ -143,14 +124,7 @@
         
     </section>
 
-    
-    <footer style="background-color: #4169E1;"  >
-        <p>&copy; 2023 Working Wizards. All rights reserved.</p>
-        <a href="https://www.instagram.com/harrachi.the_fisherman_/#" style="text-decoration: none; color: purple; padding: 10px;"><img src ="insta.jpg" width ="40px"></a>
-        <a href="https://www.youtube.com/@RhodesUniversity1" style="text-decoration: none; color: purple; padding: 10px;"><img src ="youtube.jpg" width ="50px"></a>
-    
-    </footer>
-
+    <?php include("components/footer.inc.php"); ?>
 
 </body>
 </html>
