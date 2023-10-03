@@ -31,7 +31,7 @@
             <div class="card" style="max-width: 540px;">
                 <div class="row g-0">
                     <div class="col-md-4">
-                        <img src="panashe.jpeg" class="img-fluid rounded-start" alt="Panashe">
+                        <img src="images/panashe.jpeg" class="img-fluid rounded-start" alt="Panashe">
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">

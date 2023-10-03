@@ -10,7 +10,7 @@
 session_start();
 
 // Include your database connection
-require_once("config.php");
+require_once("server/config.php");
 
 // Connect to the database
 $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASE) or die("Can't connect to the database");

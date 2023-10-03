@@ -64,7 +64,7 @@
             margin-bottom: 15px;
         }
         .background-section {
-        background-image: url(etienne-beauregard-riverin-B0aCvAVSX8E-unsplash.jpg); /* Replace with the URL of your background image */
+        background-image: url(images/etienne-beauregard-riverin-B0aCvAVSX8E-unsplash.jpg); /* Replace with the URL of your background image */
         background-size: cover; /* Adjust as needed */
         background-repeat: no-repeat;
         background-position: center center;

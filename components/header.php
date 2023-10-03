@@ -66,7 +66,7 @@
     <nav class="navbar" >
         <div class="menu">
             <a href="index.php">
-                <img src="logo_transparent.png" alt="Logo" style="height: 75px; width: 60px;">
+                <img src="images/logo_transparent.png" alt="Logo" style="height: 75px; width: 60px;">
             </a> 
 
             <a href="index.php"><i class="fas fa-home"></i> Home</a>
