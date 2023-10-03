@@ -8,56 +8,12 @@
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
 
     <title>DigSpace</title>
 
     <style>
-       /* Add this CSS code for navigation bar styles */
-       /* Add this CSS code for navigation bar styles */
-        .navbar {
-            background-color: #333; /* Navbar background color */
-            overflow: hidden;
-            height: 80px; /* Set a fixed height for the navbar */
-        }
-
-        .navbar a {
-            float: left;
-            display: block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px; /* Adjust vertical padding */
-            text-decoration: none;
-            font-size: 14px; /* Reduce font size */
-        }
-
-        /* Add a subtle transition effect for smoother hover animations */
-        .navbar a:hover {
-            background-color: #C7C7C7;
-            transition: 0.3s;
-        }
-
-        /* Highlight the current tab */
-        .navbar a.active {
-            background-color: #4169E1;
-        }
-
-        /* Style the search input and button */
-        .navbar input[type="text"] {
-            padding: 10px;
-            margin: 6px 8px;
-            border: none;
-            font-size: 14px; /* Reduce font size */
-        }
-
-        .navbar button.search-btn {
-            padding: 10px 20px;
-            background-color: #4169E1;
-            border: none;
-            color: white;
-            cursor: pointer;
-            font-size: 14px; /* Reduce font size */
-        }
-
         /* Style the navbar menu items */
         .menu {
             float: right;
@@ -68,8 +24,6 @@
             margin-left: 1px; /* Reduce margin */
         }
 
-
-
         .property-grid {
             display: flex;
             flex-wrap: wrap;
@@ -79,6 +33,7 @@
         .property {
             width: calc(20% - 15px); /* Adjust the width as needed */
             margin: 10px;
+            margin-bottom: 100px; 
             height: 200px;
             border: 1px solid #ccc;
             padding: 10px;
@@ -99,6 +54,7 @@
             color: #fff;
             border: none;
             cursor: pointer;
+            margin-bottom: 15px;
         }
         .background-section {
         background-image: url(etienne-beauregard-riverin-B0aCvAVSX8E-unsplash.jpg); /* Replace with the URL of your background image */
@@ -125,37 +81,23 @@
             text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
             color: white;
         }
+
+        .btn-view {
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: green;
+            color: #fff;
+            border: none;
+            cursor: pointer; 
+        }
     </style>
 </head>
 <body style="background-color: #C7C7C7;">
-    <header>
-        
-
-    <nav class="navbar" >
-    <div class="menu">
-       <p><img src="logo_transparent.png" alt="Logo" style="height: 75px; width: 60px;"></p>
-            
-        
-        <a href="index.php"><i class="fas fa-home"></i> Home</a>
-        <a href="faqs.php"><i class="fas fa-question-circle"></i> FAQ</a>
-        <a href="login.html"><i class="fas fa-user"></i> Profile</a>
-        <a href="Contact.php"><i class="fas fa-phone"></i> Contact Us</a>
-
-        <form method="POST" action="index.php">
-            <input type="text" name="search" placeholder="Enter Property type">
-            <button type="submit" class="search-btn" name="submit">Search</button>
-        </form>
-    </div>
-
-    <div class="auth">
-        <a href="login.html">
-            <button style="background-color: #4169E1;" class="btn">Login</button>
-        </a>
-    </div>
-</nav>
-
-
-    </header>
+<?php 
+    $currentPage = 'faqs';
+    include('header.php'); 
+  ?>
 
     <header id="tobecovered" class="background-section">
             <div class="container" style="background-color: transparent;">
@@ -181,16 +123,17 @@
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
+
                     <div class="property">
-                        <a href="propertydetails.php?id=<?php echo $row['property_id']; ?>">
-                            <img src="<?php echo $row['image_url']; ?>" alt="Property Image">
-                            <div style="background-color: #4169E1;" class="caption">
-                                <p><?php echo $row['property_name']; ?></p>
-                                <p><?php echo $row['property_location']; ?></p>
-                                <p>ZAR <?php echo $row['property_price']; ?></p>
-                            </div>
-                        </a>
+                        <img src="<?php echo $row['image_url']; ?>" alt="Property Image">
+                        <div style="background-color: #4169E1;" class="caption">
+                            <p><?php echo $row['property_name']; ?></p>
+                            <p><?php echo $row['property_location']; ?></p>
+                            <p>ZAR <?php echo $row['property_price']; ?></p>
+                            <a class="btn-view" href="property_details.php?id=<?php echo $row['property_id']; ?>">View</a>
+                        </div>
                     </div>
+
                     <?php
                 }
             } else {
@@ -205,14 +148,13 @@
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
                     <div class="property">
-                        <a href="propertydetails.php?id=<?php echo $row['property_id']; ?>">
                             <img src="<?php echo $row['image_url']; ?>" alt="Property Image">
                             <div style="background-color: #4169E1;" class="caption">
                                 <p><?php echo $row['property_name']; ?></p>
                                 <p><?php echo $row['property_location']; ?></p>
                                 <p>ZAR <?php echo $row['property_price']; ?></p>
+                                <a class="btn-view" href="property_details.php?id=<?php echo $row['property_id']; ?>">View</a>
                             </div>
-                        </a>
                     </div>
                     <?php
                 }
@@ -261,12 +203,8 @@
         // Initial display of properties
         scrollProperties(0);
     </script>
-    <footer style="background-color: #4169E1;"  >
-        <p>&copy; 2023 Working Wizards. All rights reserved.</p>
-        <a href="https://www.instagram.com/harrachi.the_fisherman_/#" style="text-decoration: none; color: purple; padding: 10px;"><img src ="insta.jpg" width ="40px"></a>
-        <a href="https://www.youtube.com/@RhodesUniversity1" style="text-decoration: none; color: purple; padding: 10px;"><img src ="youtube.jpg" width ="50px"></a>
-    
-    </footer>
+
+    <?php include("components/footer.inc.php"); ?>
 
 </body>
 </html>

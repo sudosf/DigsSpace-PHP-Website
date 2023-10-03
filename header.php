@@ -1,28 +1,16 @@
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your main styles.css file -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
+<style>
         /* Add your navigation bar styles here */
         body {
             margin: 0;
             padding: 0;
         }
 
-        .navbar {
-            background-color: #333;
+       /* Add this CSS code for navigation bar styles */
+       /* Add this CSS code for navigation bar styles */
+       .navbar {
+            background-color: #333; /* Navbar background color */
             overflow: hidden;
-            height: 80px;
-            width: 100%;
-            position: fixed;
-            top: 0;
-            z-index: 1000;
+            height: 100px; /* Set a fixed height for the navbar */
         }
 
         .navbar a {
@@ -30,25 +18,28 @@
             display: block;
             color: white;
             text-align: center;
-            padding: 14px 16px;
+            padding: 14px 16px; /* Adjust vertical padding */
             text-decoration: none;
-            font-size: 14px;
+            font-size: 14px; /* Reduce font size */
         }
 
+        /* Add a subtle transition effect for smoother hover animations */
         .navbar a:hover {
             background-color: #C7C7C7;
             transition: 0.3s;
         }
 
+        /* Highlight the current tab */
         .navbar a.active {
             background-color: #4169E1;
         }
 
+        /* Style the search input and button */
         .navbar input[type="text"] {
             padding: 10px;
             margin: 6px 8px;
             border: none;
-            font-size: 14px;
+            font-size: 14px; /* Reduce font size */
         }
 
         .navbar button.search-btn {
@@ -57,41 +48,42 @@
             border: none;
             color: white;
             cursor: pointer;
-            font-size: 14px;
+            font-size: 14px; /* Reduce font size */
         }
 
-        .navbar .menu {
+        /* Style the navbar menu items */
+        .menu {
             float: right;
         }
 
-        .navbar .menu a {
-            margin-left: 1px;
+        /* Add some space between the menu items */
+        .menu a {
+            margin-left: 1px; /* Reduce margin */
         }
     </style>
-</head>
 
-<body>
-    <header>
-        <nav align="center" class="navbar">
-            <div class="menu">
-                <p><img src="logo_transparent.png" alt="Logo" style="height: 75px; width: 60px;"></p>
-                <a href="index.php" <?php if ($currentPage == 'index') echo 'class="active"'; ?>><i class="fas fa-home"></i> Home</a>
-                <a href="faqs.php" <?php if ($currentPage == 'faqs') echo 'class="active"'; ?>><i class="fas fa-question-circle"></i> FAQ</a>
-                <a href="login.html" <?php if ($currentPage == 'login') echo 'class="active"'; ?>><i class="fas fa-user"></i> Profile</a>
-                <a href="Contact.php" <?php if ($currentPage == 'contact') echo 'class="active"'; ?>><i class="fas fa-phone"></i> Contact Us</a>
-                <form method="POST" action="index.php">
-                    <input type="text" name="search" placeholder="Enter Property type">
-                    <button type="submit" class="search-btn" name="submit">Search</button>
-                </form>
-            </div>
+<header>
+    <nav class="navbar" >
+        <div class="menu">
+            <a href="index.php">
+                <img src="logo_transparent.png" alt="Logo" style="height: 75px; width: 60px;">
+            </a> 
 
-            <div class="auth">
-                <a href="login.html">
-                    <button style="background-color: #4169E1;" class="btn">Login</button>
-                </a>
-            </div>
+            <a href="index.php"><i class="fas fa-home"></i> Home</a>
+            <a href="faqs.php"><i class="fas fa-question-circle"></i> FAQ</a>
+            <a href="login.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="Contact.php"><i class="fas fa-phone"></i> Contact Us</a>
+
+            <form method="POST" action="index.php">
+                <input type="text" name="search" placeholder="Enter Property type">
+                <button type="submit" class="search-btn" name="submit">Search</button>
+            </form>
+        </div>
+
+        <div class="auth ">
+            <a href="login.html">
+                <button style="background-color: #4169E1;" class="btn text-white">Login</button>
+            </a>
+        </div>
         </nav>
-    </header> <br>
-</body>
-
-</html>
+</header>

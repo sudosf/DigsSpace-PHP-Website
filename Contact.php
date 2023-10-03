@@ -3,6 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
     <title>DigSpace</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
@@ -11,15 +13,15 @@
     
     </head>
 <body style="background-color: #C7C7C7;">
-    
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 
-<?php $currentPage = 'contact'; include('header.php'); ?> <br> <br><br>
+<?php 
+    $currentPage = 'faqs';
+    include('header.php'); 
+  ?>
 
-<header style=" background-color: #4169E1;  text-align: center; padding: 20px 0; " >
-        <h1 style="color: #C7C7C7;"><u>The Working Wizards</u> </h1>
-</header>
-
+    <header class="text-center bg-primary p-5 text-white">
+            <h1>The Working Wizard</h1>
+    </header>
 
 <div class="container mt-5">
 
@@ -159,20 +161,116 @@
 
         
         
+        <main>
+        <div class="container-fluid my-4 text-dark text-center">
+            <!-- Section: Contact v.1 -->
+            <section class="m-5">
+                <!-- Section heading -->
+				<h5 class="card-title text-dark display-4 mb-5 text-center">Get In Touch</h5>
+                
+                <!-- Grid row -->
+                <div class="row">
+                    <!-- Grid column -->
+                    <div class="col-lg-5 mb-lg-0 mb-4">
 
+                        <section>
+                            <!-- Intro Image -->
+                        <div id="book_about" class="bg-image text-center rounded text-dark ">
+
+                        <form class="">
+                            <!-- Form with header -->
+                            <div class="card border border-dark mask-card bg-transparent text-center mx-1 my-5">
+                            <div class="card-body text-dark">
+                                <!-- Header -->
+                                <div class="form-header">
+                                    <h3 class="px-2 py-3 text-center bg-primary text-dark"><i class="fas fa-envelope"></i> Write to us:</h3>
+                                </div>
+    
+                                <!-- Body -->
+                                <div class="form-outline mb-4 mt-3">
+                                    <input type="text" id="formName" class="form-control text-dark" />
+                                    <label  class="form-label text-dark" for="formNname">
+                                        <i class="fas fa-user prefix"></i>
+                                        Name
+                                    </label>
+                                </div>
+                                
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="form-email" class="form-control text-dark">
+                                    <label class="form-label text-dark" for="form-email">
+                                        <i class="fas fa-envelope prefix"></i>
+                                        Your email
+                                    </label>
+                                </div>
+    
+                                <div class="form-outline mb-4">
+                                    <input type="text" id="form-Subject" class="form-control text-dark">
+                                    <label class="form-label text-dark" for="form-Subject">
+                                        <i class="fas fa-tag prefix"></i>
+                                        Subject
+                                    </label>
+                                </div>
+    
+                                <div class="form-outline mb-4">
+                                    <textarea id="form-text" class="form-control md-textarea text-dark" rows="3"></textarea>
+                                    <label class="form-label text-dark" for="form-text">
+                                        <i class="fas fa-pencil-alt prefix"></i>
+                                        Send message
+                                    </label>
+                                </div>
+    
+                                <div class="text-center">
+                                    <button class="btn btn-primary">Submit</button>
+                                </div>
+                            </div>
+                            </div> <!-- Form with header -->
+                            </form>
+                        </div> <!-- Grid column -->
+                      </div> <!-- Intro Image -->
+                
+                    <!-- Grid column -->
+                    <div class="col-lg-7 text-dark">
+                        <!--Google map-->
+                        <div id="map-container-section" class="z-depth-1-half map-container-section mb-4" style="width: 500px; height: auto;">
+                            <iframe
+                            src="https://maps.google.com/maps?q=rhodes%20university&t=&z=19&ie=UTF8&iwloc=&output=embed" 
+                            frameborder="0"
+                            style="border:0; width: 700px; height: 500px;" allowfullscreen></iframe>
+                        </div>
+                        
+                        <!-- Buttons-->
+                        <div class="row text-center text-dark">
+                            <div class="col-md-4 text-dark">
+                                <a class="btn-floating"><i class="fas fa-map-marker-alt"></i></a>
+                                <p class="text-dark">Grahamstown, 6139</p>
+                                <p class="mb-md-0 text-dark">South Africa</p>
+                            </div>
+                            <div class="col-md-4">
+                                <a class="btn-floating"><i class="fas fa-phone"></i></a>
+                                <p  class="text-dark">046 603 8111</p>
+                                <p class="mb-md-0 text-dark">Mon - Fri, 8:00-22:00</p>
+                            </div>
+                                <div class="col-md-4">
+                                <a class="btn-floating"><i class="fas fa-envelope"></i></a>
+                                <p  class="text-dark">PCRepairs@gmail.com</p>
+                                <p class="mb-0 text-dark">PCsale@gmail.com</p>
+                            </div>
+                        </div>
+                    </div> <!-- Grid column -->  
+                </div> <!-- Grid row -->
+        </section> <!-- Section: Contact v.1 -->
+        </div>
+	</main>
         
 
         
     </div>
 </div>
+    <?php include("components/footer.inc.php"); ?>
 
-<footer align = "center"  style="background-color: #4169E1;">
-    
-    <P style="color: black;">Email us: WorkingWizards@gmail.com </P>
-    <a href="https://www.instagram.com/harrachi.the_fisherman_/#" style="text-decoration: none; color: purple; padding: 10px;"><img src ="insta.jpg" width ="40px"></a>
-    <a href="https://www.youtube.com/@RhodesUniversity1" style="text-decoration: none; color: purple; padding: 10px;"><img src ="youtube.jpg" width ="50px"></a>
-
-  </footer>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
+        crossorigin="anonymous">
+    </script>
 </body>
 </html>
