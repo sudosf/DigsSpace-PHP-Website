@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.png" type="image/png">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     
@@ -101,9 +101,9 @@
     </style>
 </head>
 <body style="background-color: #C7C7C7;">
+
 <?php 
-    $currentPage = 'faqs';
-    include('header.php'); 
+    include('components/header.php'); 
   ?>
 
     <header id="tobecovered" class="background-section">
@@ -116,7 +116,7 @@
 
     <div class="property-grid">
     <?php
-        include('config.php');
+        include('server/config.php');
         $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASE) or die("Can't connect to the database");
 
        

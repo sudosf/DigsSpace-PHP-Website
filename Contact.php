@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <title>DigSpace</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
@@ -16,7 +16,7 @@
 
 <?php 
     $currentPage = 'faqs';
-    include('header.php'); 
+    include('components/header.php'); 
   ?>
 
     <header class="text-center bg-primary p-5 text-white">
@@ -235,7 +235,7 @@
                             <iframe
                             src="https://maps.google.com/maps?q=rhodes%20university&t=&z=19&ie=UTF8&iwloc=&output=embed" 
                             frameborder="0"
-                            style="border:0; width: 700px; height: 500px;" allowfullscreen></iframe>
+                            style="border:0; width: 600px; height: 500px;" allowfullscreen></iframe>
                         </div>
                         
                         <!-- Buttons-->
