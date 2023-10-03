@@ -110,7 +110,9 @@
             <div class="container" style="background-color: transparent;">
                 <h1 class="text-border" style="color: aliceblue;">Welcome to DigsSpace</h1>
                 <h4  class="text-border" style="color: aliceblue;">Browse and find your next home here.</h4>
-                <button  style="color: rgb(3, 11, 19); background-color: whitesmoke" class="btn"><a href="faqs.html">Learn more</a></button>
+                <button  style="color: rgb(3, 11, 19); background-color: whitesmoke" class="btn">
+                    <a href="faqs.php">Learn more</a>
+                </button>
             </div>
     </header>
 
