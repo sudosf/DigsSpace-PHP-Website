@@ -104,8 +104,8 @@
         background-image: url(etienne-beauregard-riverin-B0aCvAVSX8E-unsplash.jpg); /* Replace with the URL of your background image */
         background-size: cover; /* Adjust as needed */
         background-repeat: no-repeat;
-        background-position: center center;
-        padding: 50px 0; /* Adjust top and bottom padding as needed */
+        background-position: center;
+        padding: 50px 0; /* Adjust top and bottom padding as needed  */
         }
 
         .property img {
@@ -123,40 +123,35 @@
 </head>
 <body style="background-color: #C7C7C7;">
     <header>
-        
+        <nav class="navbar">
+            <div class="menu">
+            <img src="logo_transparent.png" alt="Logo" style="height: 75px; width: 60px;">
+                
+                <a href="index.php"><i class="fas fa-home "></i> Home</a>
+                <a href="faqs.php"><i class="fas fa-question-circle"></i> FAQ</a>
+                <a href="login.html"><i class="fas fa-user"></i> Profile</a>
+                <a href="Contact.php"><i class="fas fa-phone"></i> Contact Us</a>
 
-    <nav align="center" class="navbar" style="position: fixed; width: 100%;">
-    <div class="menu">
-       <p><img src="logo_transparent.png" alt="Logo" style="height: 75px; width: 60px;"></p>
-            
-        
-        <a href="index.php"><i class="fas fa-home"></i> Home</a>
-        <a href="faqs.php"><i class="fas fa-question-circle"></i> FAQ</a>
-        <a href="login.html"><i class="fas fa-user"></i> Profile</a>
-        <a href="Contact.php"><i class="fas fa-phone"></i> Contact Us</a>
+                <form method="POST" action="index.php">
+                    <input type="text" name="search" placeholder="Enter Property type">
+                    <button type="submit" class="search-btn" name="submit">Search</button>
+                </form>
+            </div>
 
-        <form method="POST" action="index.php">
-            <input type="text" name="search" placeholder="Enter Property type">
-            <button type="submit" class="search-btn" name="submit">Search</button>
-        </form>
-    </div>
-
-    <div class="auth">
-        <a href="login.html">
-            <button style="background-color: #4169E1;" class="btn">Login</button>
-        </a>
-    </div>
-</nav>
-
-
+            <div class="auth">
+                <a href="login.html">
+                    <button style="background-color: #4169E1;" class="btn">Login</button>
+                </a>
+            </div>
+        </nav>
     </header>
 
-    <header id="tobecovered" class="background-section">
-            <div class="container" style="background-color: #4169E1;">
-                <h1 style="color: aliceblue;">Welcome to DigsSpace</h1>
-                <h4 style="color: aliceblue;">Browse and find your next home here.</h4>
-                <button  style="color: rgb(3, 11, 19); background-color: whitesmoke" class="btn"><a href="faqs.html">Learn more</a></button>
-            </div>
+    <header id="" class="" style="">
+        <div class="container background-section" style="height: 200px">
+            <h1 style="color: aliceblue;">Welcome to DigsSpace</h1>
+            <h4 style="color: aliceblue;">Browse and find your next home here.</h4>
+            <button  style="color: rgb(3, 11, 19); background-color: whitesmoke" class="btn"><a href="faqs.html">Learn more</a></button>
+        </div>
     </header>
 
     <div class="property-grid">
@@ -199,7 +194,7 @@
                 while ($row = mysqli_fetch_assoc($result)) {
                     ?>
                     <div class="property">
-                        <a href="propertydetails.php?id=<?php echo $row['property_id']; ?>">
+                        <a href="property_details.php?id=<?php echo $row['property_id']; ?>">
                             <img src="<?php echo $row['image_url']; ?>" alt="Property Image">
                             <div style="background-color: #4169E1;" class="caption">
                                 <p><?php echo $row['property_name']; ?></p>
