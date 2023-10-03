@@ -119,13 +119,19 @@
             color: white;
             padding: 10px;
         }
+
+        .text-border {
+            /* 1 pixel black shadow to left, top, right and bottom */
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+            color: white;
+        }
     </style>
 </head>
 <body style="background-color: #C7C7C7;">
     <header>
         
 
-    <nav align="center" class="navbar" style="position: fixed; width: 100%;">
+    <nav class="navbar" >
     <div class="menu">
        <p><img src="logo_transparent.png" alt="Logo" style="height: 75px; width: 60px;"></p>
             
@@ -152,9 +158,9 @@
     </header>
 
     <header id="tobecovered" class="background-section">
-            <div class="container" style="background-color: #4169E1;">
-                <h1 style="color: aliceblue;">Welcome to DigsSpace</h1>
-                <h4 style="color: aliceblue;">Browse and find your next home here.</h4>
+            <div class="container" style="background-color: transparent;">
+                <h1 class="text-border" style="color: aliceblue;">Welcome to DigsSpace</h1>
+                <h4  class="text-border" style="color: aliceblue;">Browse and find your next home here.</h4>
                 <button  style="color: rgb(3, 11, 19); background-color: whitesmoke" class="btn"><a href="faqs.html">Learn more</a></button>
             </div>
     </header>
