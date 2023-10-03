@@ -115,7 +115,7 @@
         <h2>Costs</h2>
         <div class="faq-item">
             <h3>1. Do l pay to use DigsSpace?</h3>
-            <p style="color: black;">NO! DigsSpace is a free to use resource :) .</p>
+            <p style="color: black;">NO! DigsSpace is a free to use resource .</p>
         </div>
         <div class="faq-item">
             <h3>2. Do l pay to contact agents?</h3>

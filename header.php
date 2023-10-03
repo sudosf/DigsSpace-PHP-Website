@@ -71,7 +71,7 @@
 
             <a href="index.php"><i class="fas fa-home"></i> Home</a>
             <a href="faqs.php"><i class="fas fa-question-circle"></i> FAQ</a>
-            <a href="login.html"><i class="fas fa-user"></i> Profile</a>
+            <a href="login.php"><i class="fas fa-user"></i> Profile</a>
             <a href="Contact.php"><i class="fas fa-phone"></i> Contact Us</a>
 
             <form method="POST" action="index.php">
@@ -81,7 +81,7 @@
         </div>
 
         <div class="auth ">
-            <a href="login.html">
+            <a href="login.php">
                 <button style="background-color: #4169E1;" class="btn text-white">Login</button>
             </a>
         </div>

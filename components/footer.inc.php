@@ -1,4 +1,4 @@
-<footer class="text-center" style="background-color: #4169E1;"  >
+<footer class="footer sticky-footer footer-fixed-bottom text-center" style="background-color: #4169E1;"  >
     <p>&copy; <script>document.write(new Date().getFullYear())</script> Working Wizards. All rights reserved.</p>
 
     <!-- Section: Social media -->

@@ -11,6 +11,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
 
+    	<!-- Font Awesome -->
+	<link
+	rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+	/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <title>DigSpace</title>
 
     <style>
@@ -170,9 +177,15 @@
     </div>
     <br><br><br><br>
     <!-- Rest of your HTML content -->
-    <div class="property-nav">
-        <button style="background-color: #4169E1;" class="prev-btn" onclick="scrollProperties(-1)">Previous</button>
-        <button style="background-color: #4169E1;" class="next-btn" onclick="scrollProperties(1)">Next</button>
+    <div class="property-nav mb-3">
+        <button style="background-color: #4169E1;" class="btn btn-primary btn-lg" onclick="scrollProperties(-1)">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back
+    </button>
+        <button style="background-color: #4169E1;" class="btn btn-primary btn-lg" onclick="scrollProperties(1)">
+        Next
+        <i class="fa-solid fa-arrow-right"></i>
+    </button>
     </div>
     <script>
         // JavaScript function to scroll properties
