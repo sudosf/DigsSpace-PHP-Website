@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports</title>
+    <link rel="stylesheet" type="text/css" href="reports.css">
+</head>
+<body>
+    <!--- creating forms with different actions --->
+    <h2>Generate Reports</h2>
+<div class="all-forms">
+    <!-- Tenant List Form -->
+<div class="form-container">
+    <h3>Tenant Information</h3>
+    <form action="tenant_reports.php" method="POST">
+        <input type="submit" name="submit" value="Tenant List">
+    </form>
+</div>
+
+<div class="form-container">
+    <!-- Agent List Form -->
+    <h3>Agent Information</h3>
+    <form action="agent_reports.php" method="POST">
+        <input type="submit" name="submit" value="Agent List">
+    </form>
+</div>
+
+<div class="form-container">
+    <!-- Property List Form -->
+    <h3>Property Information</h3>
+    <form action="property_reports.php" method="POST">
+        <input type="submit" name="submit" value="Property List">
+    </form>
+</div>
+<div>
+</body>
+</html>

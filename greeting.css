@@ -1,0 +1,34 @@
+/* greeting.css */
+
+body {
+   
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-image: url(etienne-beauregard-riverin-B0aCvAVSX8E-unsplash.jpg); /* Replace with the URL of your background image */
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 50px 0; /* Adjust top and bottom padding as needed */
+    }
+.greeting-container {
+    text-align: center;
+}
+
+.greeting-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 24px;
+    margin: 0;
+}
+
+
