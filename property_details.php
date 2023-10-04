@@ -279,7 +279,7 @@
 
     </style>
 
-<body">
+<body>
     <?php 
         include('components/header.php'); 
     ?>
@@ -303,6 +303,7 @@
 
                 // Get the property ID from the query string or another source
                if (isset($_REQUEST['id'])) $_SESSION['propertyId'] = $_REQUEST['id'];
+               $agent_id = "";
                $propertyId = $_SESSION['propertyId'];
 
                 if ($propertyId) {
@@ -314,6 +315,8 @@
 
                     if ($result && mysqli_num_rows($result) > 0) {
                         $property = mysqli_fetch_array($result);
+                        
+                        $agent_id = $property['agent_id'];
 
                         // Display property details
                         echo "<h1>{$property['property_name']}</h1>";
@@ -352,8 +355,45 @@
                 <button type='submit' name='submit' class='btn btn-success px-5 btn-lg'>Rate</button>
 
                 <?php
-                    if (isset($_REQUEST['id'])) {
+                    if (isset($_POST['submit'])) {
+                        
+                        if (!isset($_POST['rating'])) {
+                            echo "<div class='alert alert-danger my-3 p-2 text-center' role='alert'>
+                                please select 1 of 5 stars to rate
+                            </div>";
+                        } else{
 
+                            // Get the selected rating
+                            $rating = mysqli_real_escape_string($conn, $_POST['rating']);
+                            $propertyId = $_SESSION['propertyId'];
+                            $userId =  $_SESSION['user_id'];
+     
+                            $query = "SELECT * FROM tenant_ratings 
+                                        WHERE user_id='$userId' AND property_id='$propertyId'";
+                            $result = mysqli_query($conn, $query);
+
+                            if (mysqli_num_rows($result) > 0) {
+                                echo "<div class='alert alert-danger my-3 p-2 text-center' role='alert'>
+                                    Property already rated.
+                            </div>";
+
+                            } else {
+                                // Insert rating into the database using the extracted propertyID
+                                $query = "INSERT INTO tenant_ratings (property_id, rating, user_id) 
+                                VALUES ('$propertyId', '$rating', '$userId')";
+                                $result = mysqli_query($conn, $query);
+                            
+                                if ($result !== false) {
+                                        echo "<div class='alert alert-warning my-3 p-2 text-center' role='alert'>
+                                            You rated this property $rating stars!
+                                        </div>";
+                                } else {
+                                    echo "<div class='alert alert-danger my-3 p-2 text-center' role='alert'>
+                                        Error rating Property.
+                                    </div>";  
+                                }
+                            }
+                        }
                     }
                 ?>
             </form>

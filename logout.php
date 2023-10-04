@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(!isset($_REQUEST['access'])){
+if(isset($_SESSION['access'])){
     // removes all session variables
     session_unset();
     // destroys the session

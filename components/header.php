@@ -71,7 +71,7 @@
     <nav class="navbar" >
         <div class="menu">
             <a href="index.php">
-                <img src="images/logo_transparent.png" alt="Logo" style="height: 75px; width: 60px;">
+                <img src="images/logo_transparent.png" alt="Logo" style="height: 80px; width: 75px;">
             </a> 
 
             <a href="index.php"><i class="fas fa-home"></i> Home</a>
@@ -80,15 +80,30 @@
             <a href="Contact.php"><i class="fas fa-phone"></i> Contact Us</a>
 
             <form method="POST" action="index.php">
-                <input type="text" name="search" placeholder="Enter Property type">
+                <input type="text" name="search" placeholder="Enter search criteria">
                 <button type="submit" class="search-btn" name="submit">Search</button>
             </form>
         </div>
 
-        <div class="auth ">
-            <a href="login.php">
-                <button style="background-color: #4169E1;" class="btn text-white">Login</button>
-            </a>
-        </div>
+        <?php 
+        
+        if(!isset($_SESSION['access'])){
+            echo "
+                <div class='auth'>
+                <a href='login.php'>
+                    <button style='background-color: #4169E1;' class='btn text-white'>Login</button>
+                </a>
+            </div>";
+        }
+        else {
+            echo "
+                <div class='auth'>
+                <a href='logout.php'>
+                    <button class='btn btn-danger text-white'>Logout</button>
+                </a>
+            </div>";
+        }
+        
+        ?>
         </nav>
     </header>

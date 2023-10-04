@@ -107,7 +107,7 @@ $occupiedPropertiesResult = mysqli_query($conn, $occupiedPropertiesQuery);
             <ul>
             <li><a href="agent_panel.php">Home</a></li>
                 <li><a href="addtenant.php">Add Tenant</a></li>
-                <li><a href="reports.html">Add Property</a></li>
+                <li><a href="addproperty.php">Add Property</a></li>
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="logout.php">Logout</a></li>
             </ul>
@@ -199,7 +199,7 @@ $occupiedPropertiesResult = mysqli_query($conn, $occupiedPropertiesQuery);
         </div>
     </main>
 
-    <?php include("components/footer.inc.php"); ?>
+   
 
 </body>
 </html>

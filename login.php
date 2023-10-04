@@ -1,5 +1,9 @@
 <?php
    session_start();
+
+    if(isset($_SESSION['access'])){
+        header("Location: index.php"); // Redirects back to homepage
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,7 +16,6 @@
 </head>
 
 <body>
-
     <div class="login-container">
         <div class="login-header">
             <h2>User Login</h2>
