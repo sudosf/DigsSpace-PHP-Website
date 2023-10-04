@@ -1,0 +1,238 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+/* Existing CSS styles */
+
+/* Header and Navigation */
+.navbar {
+    background-color: #C7C7C7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; 
+}
+
+
+       /* Add this CSS code for navigation bar styles */
+       /* Add this CSS code for navigation bar styles */
+       .navbar {
+        background-color: #333; /* Navbar background color */
+        overflow: hidden;
+        height: 90px; /* Set a fixed height for the navbar */
+    }
+
+    .navbar a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px; /* Adjust vertical padding */
+        text-decoration: none;
+        font-size: 14px; /* Reduce font size */
+    }
+
+    /* Add a subtle transition effect for smoother hover animations */
+    .navbar a:hover {
+        background-color: #C7C7C7;
+        transition: 0.3s;
+    }
+
+    /* Highlight the current tab */
+    .navbar a.active {
+        background-color: #4169E1;
+    }
+
+    /* Style the search input and button */
+    .navbar input[type="text"] {
+        padding: 10px;
+        margin: 6px 8px;
+        border: none;
+        font-size: 14px; /* Reduce font size */
+    }
+
+    .navbar button.search-btn {
+        padding: 10px 20px;
+        background-color: #4169E1;
+        border: none;
+        color: white;
+        cursor: pointer;
+        font-size: 14px; /* Reduce font size */
+    }
+
+
+
+
+.logo img {
+    width: 30px;
+    height: 30px;
+}
+
+.menu {
+    
+    display: flex;
+    align-items: center;
+}
+
+.menu-item {
+    margin: 0 15px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #FFFFFF;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.menu-item.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Search Bar */
+.search-bar {
+    text-align: center;
+    background-color: #F2F2F2;
+    padding: 10px 0;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.search-btn {
+    background-color: #4169E1;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+
+/* Container */
+.container {
+    background-color: #F2F2F2;
+    text-align: center;
+    padding: 50px;
+    color: #000000;
+}
+
+h1 {
+    font-size: 36px;
+    color: #000000;
+}
+
+p {
+    color: #FFFFFF;
+}
+
+.btn {
+    background-color: #4169E1;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: #C7C7C7;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer-selection {
+    margin-bottom: 30px;
+}
+
+footer p {
+    color: #000000;
+}
+
+
+
+.property-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+}
+
+.property {
+    width: 250px;
+    border: 1px solid #C7C7C7;
+    padding: 10px;
+    text-align: center;
+}
+
+.property img {
+    max-width: 100%;
+    height: 60%;
+}
+
+.caption {
+    margin-top: 10px;
+    background-color: #4169E1;
+    color: #FFFFFF;
+    padding: 5px 0;
+
+}
+
+
+
+
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.caption {
+    margin-top: 10px;
+}
+
+/* Existing CSS styles */
+
+.navbar {
+    background-color: #C7C7C7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+    font-weight:400;
+    margin-right: 40px;
+}
+
+

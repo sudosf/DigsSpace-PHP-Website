@@ -35,7 +35,8 @@ if ($propertyId) {
         echo "<p>Status: {$property['availability_status']}</p>";
         echo "<p>Category: {$property['property_category']}</p>";
         echo "<p>Description: {$property['property_description']}</p>";
-
+        echo "<a href='Star_rating_system.php?id=" . $property['property_id'] . "'><button>Rate Property</button></a><br><br>";
+        
         // Retrieve property images
         $imageQuery = "SELECT * FROM images WHERE property_id = $propertyId";
         $imageResult = mysqli_query($conn, $imageQuery);

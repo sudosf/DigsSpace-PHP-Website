@@ -126,7 +126,13 @@
         // Check if the search form is submitted
         if(isset($_POST['submit']) && !empty($_POST['search'])) {
             $searchTerm = mysqli_real_escape_string($conn, $_POST['search']);
-            $sql = "SELECT * FROM properties WHERE property_category LIKE '%$searchTerm%'";
+            $sql = "SELECT * FROM properties WHERE 
+            (property_name LIKE '%$searchTerm%' OR 
+            property_description LIKE '%$searchTerm%' OR 
+            property_location LIKE '%$searchTerm%' OR 
+            property_price LIKE '%$searchTerm%' OR 
+            property_category LIKE '%$searchTerm%') AND 
+            availability_status = 'available'";
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
@@ -150,7 +156,7 @@
             }
         } else {
             // Fetch property data from the database
-            $sql = "SELECT * FROM properties";
+            $sql = "SELECT * FROM properties WHERE availability_status = 'available'";
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {

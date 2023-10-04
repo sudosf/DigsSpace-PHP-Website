@@ -35,7 +35,7 @@ body {
 
 .search-button {
     padding: 6px 10px;
-    background-color: #52AB98;
+    background-color: #4169E1;
     color: #FFFFFF;
     border-radius: 20px;
     cursor: pointer;
@@ -44,7 +44,7 @@ body {
 /* Filter button styles */
 .filter-button button {
     padding: 6px 10px;
-    background-color: #52AB98;
+    background-color: #4169E1;
     color: #FFFFFF;
     border-radius: 20px;
     cursor: pointer;
@@ -72,7 +72,7 @@ body {
 }
 
 .admin-heading {
-margin-left: 10px;
+    margin-left: 10px;
 }
 
 .admin-main p{
@@ -100,7 +100,7 @@ margin-left: 10px;
 
 .property-listings {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
 }
 
 .property-listing {
@@ -131,12 +131,10 @@ margin-left: 10px;
 
 .agent-notifications {
     margin-top: 10px;
-
 }
 
 .agent-notifications p {
     font-size: 14px;
-
 }
 
 .agent-notifications ul {
@@ -193,20 +191,21 @@ margin-left: 10px;
 }
 
 .available {
-    color: #52AB98; 
+    color: #4169E1; 
     font-weight: bold;
 }
 
 .property button{
     padding: 5px 10px;
-    background-color: #52AB98;
+    background-color: #4169E1;
     color: #FFFFFF;
     border-radius: 20px;
     cursor: pointer;
 }
+
 .property-listing button{
     padding: 5px 10px;
-    background-color: #52AB98;
+    background-color: #4169E1;
     color: #FFFFFF;
     border-radius: 20px;
     cursor: pointer;

@@ -31,13 +31,14 @@ if (isset($_SESSION['user_id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
+    
     <link rel="stylesheet" type="text/css" href="admin_panel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="admin-header">
         <div class="logo">
-        <img src="images/logo.png" alt="DigsSpace Logo">
+        <img src="images/logo.png" alt="DigsSpace Logo" style="height: 90px; width: 90px;">
         </div>
 
         <form method="POST" action="search_results.php">

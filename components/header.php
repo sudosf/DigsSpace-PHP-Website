@@ -81,7 +81,7 @@
         </div>
 
         <div class="auth ">
-            <a href="login.php">
+            <a href="login.html">
                 <button style="background-color: #4169E1;" class="btn text-white">Login</button>
             </a>
         </div>
