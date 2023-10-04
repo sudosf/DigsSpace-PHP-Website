@@ -64,7 +64,6 @@
 </head>
 <body>
  <?php 
-    $currentPage = 'faqs';
     include('components/header.php'); 
   ?>
 

@@ -93,11 +93,16 @@
             text-decoration: none;
             display: inline-block;
             padding: 10px 20px;
-            background-color: green;
-            color: #fff;
+            background-color:  #fff;
+            color: #333;
             border: none;
             cursor: pointer; 
         }
+        
+        .btn-view:hover {
+        background-color: #333; /* Change the background color on hover */
+        color: #fff; /* Change the text color on hover */
+    }
     </style>
 </head>
 <body style="background-color: #C7C7C7;">
@@ -105,7 +110,7 @@
 <?php 
     include('components/header.php'); 
   ?>
-
+  
     <header id="tobecovered" class="background-section">
             <div class="container" style="background-color: transparent;">
                 <h1 class="text-border" style="color: aliceblue;">Welcome to DigsSpace</h1>
@@ -131,8 +136,8 @@
             property_description LIKE '%$searchTerm%' OR 
             property_location LIKE '%$searchTerm%' OR 
             property_price LIKE '%$searchTerm%' OR 
-            property_category LIKE '%$searchTerm%') AND 
-            availability_status = 'available'";
+            property_category LIKE '%$searchTerm%') WHERE 
+            availability_status = 'available' AND deleted = 0";
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {
@@ -156,7 +161,7 @@
             }
         } else {
             // Fetch property data from the database
-            $sql = "SELECT * FROM properties WHERE availability_status = 'available'";
+            $sql = "SELECT * FROM properties WHERE availability_status = 'available' AND deleted = 0";
             $result = mysqli_query($conn, $sql);
 
             if (mysqli_num_rows($result) > 0) {

@@ -15,12 +15,12 @@
 <body style="background-color: #C7C7C7;">
 
 <?php 
-    $currentPage = 'faqs';
     include('components/header.php'); 
   ?>
 
+
     <header class="text-center bg-primary p-5 text-white">
-            <h1>The Working Wizard</h1>
+            <h1>The Working Wizards</h1>
     </header>
 
 <div class="container mt-5">
@@ -252,8 +252,8 @@
                             </div>
                                 <div class="col-md-4">
                                 <a class="btn-floating"><i class="fas fa-envelope"></i></a>
-                                <p  class="text-dark">PCRepairs@gmail.com</p>
-                                <p class="mb-0 text-dark">PCsale@gmail.com</p>
+                                <p  class="text-dark">WorkingWizards@gmail.com</p>
+                                <p class="mb-0 text-dark">WorkingWizards@sales.co.za</p>
                             </div>
                         </div>
                     </div> <!-- Grid column -->  

@@ -60,7 +60,12 @@
         .menu a {
             margin-left: 1px; /* Reduce margin */
         }
+
+        .active {
+            background-color: blue;
+        }
     </style>
+
 
 <header>
     <nav class="navbar" >
@@ -81,9 +86,9 @@
         </div>
 
         <div class="auth ">
-            <a href="login.html">
+            <a href="login.php">
                 <button style="background-color: #4169E1;" class="btn text-white">Login</button>
             </a>
         </div>
         </nav>
-</header>
+    </header>

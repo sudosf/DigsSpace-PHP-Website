@@ -87,7 +87,7 @@ if (isset($_POST['submit'])) {
     if ($result) {
         echo "<p style= \"color:green;\"> You rated this property $rating stars! </p>";
     } else {
-        echo "<strong style= \"color:red;\"> Could not execute query!</strong>";
+        echo "<strong style= \"color:red;\"> Property already rated</strong>";
     }
 }
 

@@ -6,6 +6,9 @@
     <title>Delete Property</title>
 </head>
 <body>
+    <div class="goback-button">
+    <a href="property_reports.php"><button>Show Property List</button></a>
+    </div>
 <?php
 session_start();
 

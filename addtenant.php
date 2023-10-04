@@ -72,8 +72,8 @@
         or die("Can't connect to the database");
         
         //storing query
-        $query = "INSERT INTO users(firstName, lastName, email, phone_number, username, password_hash, agent_id)
-         VALUE ('$firstname', '$lastname', ' $email', '$contact', '$username', '$password', '$user_id')";
+        $query = "INSERT INTO users(firstName, lastName, email, phone_number, username, password_hash, tenant_id)
+         VALUE ('$firstname', '$lastname', '$email', '$contact', '$username', '$password', '$user_id')";
          
          $result = mysqli_query($conn, $query);
         
@@ -81,7 +81,7 @@
     if ($result) {
         echo "<p><strong style=\"color:blue; text-align:center; position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%);\">The new tenant was added!</strong></p>";
     } else {
-        echo "<strong style=\"color:red; text-align:center; position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%);\">Error: Unable to add the tenant.</strong>";
+        echo "<strong style=\"color:red; text-align:center; position: absolute; top: 5%; left: 50%; transform: translate(-50%, -50%);\">Error: Unable to add the tenant.</strong>" . mysqli_error($conn);
     }
 
         mysqli_close($conn);
