@@ -107,7 +107,7 @@
     }
     </style>
 </head>
-<body style="background-color: #C7C7C7;">
+<body style="background-color:#C7C7C7 ;">
 
 <?php 
     include('components/header.php'); 
@@ -138,9 +138,12 @@
             property_description LIKE '%$searchTerm%' OR 
             property_location LIKE '%$searchTerm%' OR 
             property_price LIKE '%$searchTerm%' OR 
-            property_category LIKE '%$searchTerm%') WHERE 
+            property_category LIKE '%$searchTerm%') AND 
             availability_status = 'available' AND deleted = 0";
             $result = mysqli_query($conn, $sql);
+           
+
+           
 
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
@@ -152,7 +155,7 @@
                             <p><?php echo $row['property_name']; ?></p>
                             <p><?php echo $row['property_location']; ?></p>
                             <p>ZAR <?php echo $row['property_price']; ?></p>
-                            <a class="btn-view" href="property_details.php?id=<?php echo $row['property_id']; ?>">View</a>
+                            <a class="btn-view" href="HomePagePropertyDetails.php?id=<?php echo $row['property_id']; ?>">View</a>
                         </div>
                     </div>
 
@@ -175,7 +178,7 @@
                                 <p><?php echo $row['property_name']; ?></p>
                                 <p><?php echo $row['property_location']; ?></p>
                                 <p>ZAR <?php echo $row['property_price']; ?></p>
-                                <a class="btn-view" href="property_details.php?id=<?php echo $row['property_id']; ?>">View</a>
+                                <a class="btn-view" href="HomePagePropertyDetails.php?id=<?php echo $row['property_id']; ?>">View</a>
                             </div>
                     </div>
                     <?php

@@ -93,7 +93,8 @@ if (isset($_REQUEST['id'])) {
         <div class="form-group" id="image-upload-container">
     <label for="images">Image 1:</label>
     <input type="file" name="images[]" id="images" accept="image/*">
-</div>
+
+</div class="existing-images">
         <!-- Display existing images associated with the property -->
         <?php foreach ($imageUrls as $imageUrl) { ?>
             <div class="image-preview">
@@ -108,6 +109,8 @@ if (isset($_REQUEST['id'])) {
         </div>
     </form>
 </div>
+<button onclick="window.location.href='property_reports.php'" class="back-button">Back to Property List</button>
+
 
 <script>
     // JavaScript to dynamically add more image upload inputs
@@ -132,7 +135,6 @@ if (isset($_REQUEST['id'])) {
     } else {
         echo "Property not found.";
     }
-
     // Disconnect from the database
     mysqli_close($conn);
 } else {

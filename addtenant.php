@@ -1,3 +1,7 @@
+<?php
+// Start the session
+    session_start();
+    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,13 +29,14 @@
 
      <div class="form-group">
     <label for="email">Email:</label><br>
-    <input type="text" name="email" required><br>
+    <input type="email" name="email" required ><br>
      </div>
 
      <div class="form-group">
     <label for="contact">Contact number:</label><br>
-    <input type="text" name="contact" maxlength="10" required><br><br>
-     </div>
+    <input type="text" name="contact" pattern="[0-9]{10}" title="Please enter a 10-digit contact number" required><br><br>
+</div>
+
 
      <div class="form-group">
     <label for="username">Username:</label><br>
@@ -50,9 +55,6 @@
     </form>
     </div>
     <?php
-    // Start the session
-    session_start();
-
     if (isset($_REQUEST['submit']))
     {
         //fetching data from form and storing it
@@ -72,7 +74,7 @@
         or die("Can't connect to the database");
         
         //storing query
-        $query = "INSERT INTO users(firstName, lastName, email, phone_number, username, password_hash, tenant_id)
+        $query = "INSERT INTO users(firstName, lastName, email, phone_number, username, password_hash, agent_id)
          VALUE ('$firstname', '$lastname', '$email', '$contact', '$username', '$password', '$user_id')";
          
          $result = mysqli_query($conn, $query);

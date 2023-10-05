@@ -107,6 +107,7 @@ $occupiedPropertiesResult = mysqli_query($conn, $occupiedPropertiesQuery);
             <ul>
             <li><a href="agent_panel.php">Home</a></li>
                 <li><a href="addtenant.php">Add Tenant</a></li>
+                <li><a href="tenant_assignment.php">Assign Tenant</a></li>
                 <li><a href="addproperty.php">Add Property</a></li>
                 <li><a href="profile.php">Profile</a></li>
                 <li><a href="logout.php">Logout</a></li>
@@ -150,7 +151,7 @@ $occupiedPropertiesResult = mysqli_query($conn, $occupiedPropertiesQuery);
                     echo '<h2>' . $row['property_name'] . '</h2>';
                     echo '<p>Description: ' . $row['property_description'] . '</p>';
                     echo '<p>Location: ' . $row['property_location'] . '</p>';
-                    echo '<p>Price: $' . $row['property_price'] . '</p>';
+                    echo '<p>Price: R' . $row['property_price'] . '</p>';
                     echo "<td><a href='property_details.php?id=" . $row['property_id'] . "'><button>View Property</button></a></td>";
                     echo '</div></div>';
                 }
@@ -170,7 +171,7 @@ $occupiedPropertiesResult = mysqli_query($conn, $occupiedPropertiesQuery);
                     echo '<h2>' . $row['property_name'] . '</h2>';
                     echo '<p>Description: ' . $row['property_description'] . '</p>';
                     echo '<p>Location: ' . $row['property_location'] . '</p>';
-                    echo '<p>Price: $' . $row['property_price'] . '</p>';
+                    echo '<p>Price: R' . $row['property_price'] . '</p>';
                     echo '<button type="submit" name="View Property">View Property</button>';
                     echo '</div></div>';
                 }
@@ -190,7 +191,7 @@ $occupiedPropertiesResult = mysqli_query($conn, $occupiedPropertiesQuery);
                     echo '<h2>' . $row['property_name'] . '</h2>';
                     echo '<p>Description: ' . $row['property_description'] . '</p>';
                     echo '<p>Location: ' . $row['property_location'] . '</p>';
-                    echo '<p>Price: $' . $row['property_price'] . '</p>';
+                    echo '<p>Price: R' . $row['property_price'] . '</p>';
                     echo '<button type="submit" name="View Property">View Property</button>';
                     echo '</div></div>';
                 }

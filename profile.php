@@ -1,6 +1,15 @@
 <?php
 session_start();
-
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<?php
 // Check if the user is logged in
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.html"); // Redirect to the login page if not logged in
@@ -56,10 +65,6 @@ if (isset($_POST['update'])) {
     <link rel="stylesheet" type="text/css" href="forms.css"> 
 </head>
 <body>
-    <header>
-        <!-- Navigation bar or header content goes here -->
-    </header>
-
     <div class="container">
         <h2>Your Profile</h2>
         <?php if (!isset($_POST['edit'])) { ?>
@@ -81,6 +86,16 @@ if (isset($_POST['update'])) {
                     <label for="contact">Contact number:</label>
                     <input type="text" name="contact" value="<?php echo $userData['phone_number']; ?>" readonly>
                 </div>
+
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" value="<?php echo $userData['username']; ?>" readonly>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="text" name="password" value="<?php echo $userData['password_hash']; ?>" readonly>
+                </div>
             </form>
             <!-- Add an "Edit" button to allow the user to edit their information -->
             <form method="POST">
@@ -91,19 +106,27 @@ if (isset($_POST['update'])) {
             <form method="POST" action="profile.php">
                 <div class="form-group">
                     <label for="firstname">First Name:</label>
-                    <input type="text" name="firstname" value="<?php echo $userData['firstName']; ?>" required>
+                    <input type="text" name="firstname" value="<?php echo $userData['firstName']; ?>" readonly>
                 </div>
                 <div class="form-group">
                     <label for="lastname">Last Name:</label>
-                    <input type="text" name="lastname" value="<?php echo $userData['lastName']; ?>" required>
+                    <input type="text" name="lastname" value="<?php echo $userData['lastName']; ?>" readonly>
                 </div>
                 <div class="form-group">
                     <label for="email">Email:</label>
-                    <input type="text" name="email" value="<?php echo $userData['email']; ?>" required>
+                    <input type="email" name="email" value="<?php echo $userData['email']; ?>" required>
                 </div>
                 <div class="form-group">
                     <label for="contact">Contact number:</label>
-                    <input type="text" name="contact" value="<?php echo $userData['phone_number']; ?>" maxlength="10" required>
+                    <input type="text" name="contact" value="<?php echo $userData['phone_number']; ?>" pattern="[0-9]{10}" title="Please enter a 10-digit contact number" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" value="<?php echo $userData['username']; ?>" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="text" name="password" value="<?php echo $userData['password_hash']; ?>" required>
                 </div>
                 <div class="form-group">
                     <input type="submit" name="update" value="Update" class="submit-btn">
@@ -119,7 +142,6 @@ if (isset($_POST['update'])) {
     </div>
 
     <footer>
-        <!-- Footer content goes here -->
     </footer>
 </body>
 </html>
@@ -128,3 +150,5 @@ if (isset($_POST['update'])) {
 // Close the database connection
 mysqli_close($conn);
 ?>
+</body>
+</html>

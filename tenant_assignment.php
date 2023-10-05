@@ -14,6 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tenant Assignment</title>
     <link rel="stylesheet" type="text/css" href="forms.css">
+    <link rel="stylesheet" type="text/css" href="admin_panel.css">
+
 </head>
 
 
@@ -112,8 +114,6 @@
     </div>
 
     <?php
-    // Start the session
-
     // Check if the form is submitted
     if (isset($_POST['submit'])) {
         // Retrieve form data
@@ -127,7 +127,7 @@
         require_once("config.php");
 
         // Perform the database insert operation
-        $insertQuery = "INSERT INTO tenant_assignment (user_id, tenant_id, property_id, assignment_date, status) VALUES ($user_id, $tenant_id, $property_id, '$assignment_date', '$status')";
+        $insertQuery = "INSERT INTO tenant_assignment (user_id, tenant_id, property_id, assignment_date, status) VALUES ('$user_id', '$tenant_id', '$property_id', '$assignment_date', '$status')";
 
         // Execute the insert query
         $insertResult = mysqli_query($conn, $insertQuery);

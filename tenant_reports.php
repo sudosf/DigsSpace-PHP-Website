@@ -17,10 +17,20 @@
         // connect to database
         $conn = mysqli_connect(SERVERNAME, USERNAME, PASSWORD, DATABASE) or die("There was a problem connecting to the database!");
 
+        $query = ""; // Initialize the $query variable
+
         // query executed for each button pressed
+        if (isset($_REQUEST['submit'])) {
+            $clickedButton = $_REQUEST['submit'];
+
         if($_REQUEST['submit'] == "Tenant List"){
             $query = "SELECT * FROM users WHERE user_role = 'Tenant' AND deleted = 0";
+        }elseif($clickedButton === 'Property Popularity'){
+
+            header('Location: http://is3-dev.ict.ru.ac.za/Sysdev/WorkingWizards/Final/bargraph.php');
+
         }
+    }
         //execute query
         $result = mysqli_query($conn, $query) or die('There was a problem displaying table!');
 

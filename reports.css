@@ -54,15 +54,16 @@ input[type="submit"]:hover {
             background-color: #a19a9a;
         }
 
-       /* Style for the search form */
+/* Style for the search container */
 .search-container {
     text-align: center;
+    margin-top: 20px; /* Add some margin at the top */
 }
 
 /* Style for the search bar */
 .search-label {
     font-size: 20px !important;
-   font-weight: bold;
+    font-weight: bold;
 }
 
 .search-input {
@@ -72,6 +73,7 @@ input[type="submit"]:hover {
     border: 2px solid #ccc;
     border-radius: 5px;
     margin-right: 10px;
+    margin-bottom: 10px; /* Add margin at the bottom */
 }
 
 /* Style for the search button */
@@ -83,25 +85,35 @@ input[type="submit"]:hover {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-bottom: 10px; /* Add margin at the bottom */
 }
 
-.search-button:hover {
-    background-color: #82b4ea !important;
-}
- 
-.property-list-button:hover {
-    background-color: #82b4ea !important;
-}
 .property-list-button {
     background-color: #007bff !important; /* Blue color for the button */
     color: #fff !important; /* White text color */
     border: none;
     padding: 10px 15px !important;
     cursor: pointer;
+    margin-bottom: 10px; /* Add margin at the bottom */
 }
 
 .button-wrapper {
     display: inline-block;
     margin-left: 10px;
     vertical-align: middle;
+}
+
+/* Style for the "Back to Property List" button */
+.back-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.back-button:hover {
+    background-color: #82b4ea;
 }
